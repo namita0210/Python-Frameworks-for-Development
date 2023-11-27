@@ -7,13 +7,6 @@ app = Flask(__name__)
 def home():
     return '''This is the home page'''
 
-@app.route("/<name>") # dynamic URL
-def user(name):
-    return f"""Welcome {name}"""
-
-@app.route("/admin") 
-def admin():
-    return redirect(url_for("user", name = "FantasticBaby")) # redirect to home page
 
 if __name__ == "__main__":
     app.run(debug=True) # run the application in debug mode
