@@ -65,33 +65,7 @@ def home():
 
 @app.route("/<name>") # dynamic URL
 def name(name):
-    return f"""Welcome {name}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome Page</title>
-    
-</head>
-<body>
-    <header>
-        <h1>Welcome Page</h1>
-    </header>
-    <div class="container">
-        <p id="welcomeMessage">Loading...</p>
-    </div>
-
-    <script>
-        // Fetching the dynamic URL using JavaScript
-        const urlParams = new URLSearchParams(window.location.search);
-        const name = urlParams.get('name');
-
-        // Displaying the retrieved name on the page
-        document.getElementById('welcomeMessage').innerText = `Welcome ${name}`;
-    </script>
-</body>
-</html>
-"""
+    return f"""Welcome {name}"""
 
 @app.route("/admin") # dynamic URL
 def admin():
