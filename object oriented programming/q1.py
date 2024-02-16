@@ -64,8 +64,8 @@ class Engineer(Employee):
               Age : {self.age} ''')
         super().__init__('Engineer','IT',75000)
 
-        
+#Q5 :        
 #main method
-engg1 = Engineer("Elon Musk",45)
-engg1.showDetails()
+# engg1 = Engineer("Elon Musk",45)
+# engg1.showDetails()
 
