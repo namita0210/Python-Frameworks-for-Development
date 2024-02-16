@@ -12,8 +12,27 @@ class Student:
             ans+=self.marks[i]
         return ans/len(self.marks)
 
+#Q2: Create a bank account class with debit, credit and balance functionalities
+class Bank :
+    def __init__(self, balance , acc_no):
+        self.balance = balance
+        self.acc_no = acc_no
+
+    def credit(self, amt):
+        self.balance += amt
+        print("The account has been credited with Rs. ",amt,"and the balance is ",self.balance)
+
+    def debit(self, amt):
+        self.balance -= amt
+        print("The account has been debited with Rs. ",amt,"and the balance is ",self.balance)
+
+    def getBalance(self):
+        return self.balance    
+
 #main method
 mylist = [56,76,4]
 s1 = Student("Namita",mylist)
-print(s1.avg())            
+
+customer1 = Bank(1200,123)
+customer1.credit(10)           
 
