@@ -29,10 +29,26 @@ class Bank :
     def getBalance(self):
         return self.balance    
 
-#main method
-mylist = [56,76,4]
-s1 = Student("Namita",mylist)
+#Q3: Define a circle class to create a circle with radius r using the constructor
+class Circle:
 
-customer1 = Bank(1200,123)
-customer1.credit(10)           
+    def __init__(self , radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius * self.radius        
+    
+    def perimeter(self):
+        return 2 * 3.14 * self.radius
+        
+#main method
+# mylist = [56,76,4]
+# s1 = Student("Namita",mylist)
+
+# customer1 = Bank(1200,123)
+# customer1.credit(10)  
+
+c1 = Circle(5)
+print(c1.area())
+
 
