@@ -40,15 +40,32 @@ class Circle:
     
     def perimeter(self):
         return 2 * 3.14 * self.radius
+    
+#Q4: Define an employ class method which has a  role , department , and salary
+    #Create an engineer class that inherits form the employee class and has additional attributes name and age
+class Employee:
+
+    def __init__(self , role , dept , sal):
+        self.role = role
+        self.department = dept
+        self.salary = sal   
+
+    def showDetails(self):
+        print(f''' Role : {self.role}
+        Department : {self.department}
+        Salary : {self.salary}''')  
+
+class Engineer(Employee):
+    
+    def __init__(self, name , age):
+        self.name = name
+        self.age = age
+        print(f''' Name : {self.name}
+              Age : {self.age} ''')
+        super().__init__('Engineer','IT',75000)
+
         
 #main method
-# mylist = [56,76,4]
-# s1 = Student("Namita",mylist)
-
-# customer1 = Bank(1200,123)
-# customer1.credit(10)  
-
-c1 = Circle(5)
-print(c1.area())
-
+engg1 = Engineer("Elon Musk",45)
+engg1.showDetails()
 
