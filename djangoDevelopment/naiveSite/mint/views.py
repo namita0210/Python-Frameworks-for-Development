@@ -3,3 +3,6 @@ from django.http import HttpResponse
 # Create your views here.
 def index(response):
     return HttpResponse("<h1>No way Namita!</h1>")
+
+def v1(response):
+    return HttpResponse("<i>Welcome to your first view</i>")
